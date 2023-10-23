@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ecoubica</title>
-    <link rel="shortcut icon" href="{{ asset('img/Logo2(1).png') }}" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
@@ -20,7 +19,7 @@
       }
 
       .color-enlace-personalizado {
-    color: #FFFFFF; 
+    color: #FFFFFF;
 }
 
 
@@ -29,7 +28,7 @@
   </head>
   <body>
     
-  <header>
+<header>
   <div class="navbar navbar-dark bg-success shadow-sm">
     <div class="container">
       <a href="#" class="navbar-brand d-flex align-items-center">
@@ -38,13 +37,13 @@
       </a>
       <ul class="nav nav-underline">
         <li class="nav-item">
-          <a class="nav-link active color-enlace-personalizado" aria-current="page" href="/">Inicio</a>
+          <a class="nav-link color-enlace-personalizado" aria-current="page" href="/">Inicio</a>
         </li>
         <li class="nav-item">
           <a class="nav-link color-enlace-personalizado" href="/login">Registro</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link color-enlace-personalizado" href="singin">Ingresar</a>
+          <a class="nav-link active color-enlace-personalizado" href="/singin">Ingresar</a>
         </li>
         <li class="nav-item">
           <a class="nav-link color-enlace-personalizado" href="#">Contacto</a>
@@ -54,19 +53,42 @@
   </div>
 </header>
 
-<img src="{{ asset('img/eslogan.png') }}" alt="" width="1500" height="500">
 
 
-<footer class="text-body-secondary py-5">
-  <div class="container">
-    <p class="mb-1">Proyecto creado para el ramo de arquitectura 2023 Duoc UC San Joaquin, todos los derechos reservados</p>
-    <p class="mb-1">Proyecto creado por GreenCode.</p>
-  </div>
-</footer>
+<main>
+    <section class="py-5 text-center container">
+      <div class="row justify-content-center">
+        <div class="col-md-3">
+          <div class="card text-left mt-3">
+            <div class="card-body">
+
+              <h2>Iniciar sesión</h2>
+
+              <form action="#" method="POST">
+
+                  <div class="mb-3">
+                      <label for="usuario" class="form-label">Usuario</label>
+                      <input type="text" class="form-control" id="usuario" name="usuario" value="ejemplo@gmail.com">
+                  </div>
+                  <div class="mb-3">
+                      <label for="correo" class="form-label">Contraseña</label>
+                      <input type="password" class="form-control" id="password" name="password" value="101010">
+                  </div>
+                  <div class="d-grid gap-2">
+                    <button class="btn btn-primary" type="submit">Iniciar</button>
+                  </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous"></script>
-    
+
 </body>
 </html>
