@@ -31,3 +31,7 @@ Route::get('login', function () {
 Route::get('singin', function () {
     return view('singin');
 });
+
+Route::get('/mapa', function () {
+    return view('mapa');
+});

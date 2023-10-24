@@ -55,24 +55,37 @@
 
 
 
-<main>
-    <section class="py-5 text-center container">
+<section class="py-5 text-center container">
       <div class="row justify-content-center">
         <div class="col-md-3">
           <div class="card text-left mt-3">
             <div class="card-body">
+              {{-- <h4 class="card-title">Title</h4>
+              <p class="card-text">Body</p> --}}
+
 
               <h2>Iniciar sesión</h2>
 
-              <form action="#" method="POST">
+              @if($errors->any())
+                  <div class="alert alert-danger">
+                      <ul>
+                          @foreach($errors->all() as $error)
+                              <li>{{ $error }}</li>
+                          @endforeach
+                      </ul>
+                  </div>
+              @endif
 
+              <form action="" method="POST">
+                  @csrf
+                  <img src="{{ asset('img/eco.png') }}" width="150" alt="">
                   <div class="mb-3">
                       <label for="usuario" class="form-label">Usuario</label>
-                      <input type="text" class="form-control" id="usuario" name="usuario" value="ejemplo@gmail.com">
+                      <input type="text" class="form-control" id="usuario" name="usuario" value="ecoubica@gmail.com">
                   </div>
                   <div class="mb-3">
                       <label for="correo" class="form-label">Contraseña</label>
-                      <input type="password" class="form-control" id="password" name="password" value="101010">
+                      <input type="password" class="form-control" id="password" name="password" value="admin">
                   </div>
                   <div class="d-grid gap-2">
                     <button class="btn btn-primary" type="submit">Iniciar</button>
@@ -85,6 +98,7 @@
       </div>
     </section>
   </main>
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>

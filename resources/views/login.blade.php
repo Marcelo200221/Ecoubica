@@ -65,7 +65,7 @@
               <h2>Registrarse</h2>
               <pre>{{ Auth::user() }}</pre>
 
-              <form method="POST">
+              <form action="" method="POST">
                 @csrf
                
                   <img src="{{ asset('img/eco.png') }}" width="150" alt="">
