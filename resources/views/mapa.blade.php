@@ -57,7 +57,7 @@
 </header>
 
 <div id="map"></div>
-<img id="image" src="img/re.svg" style="display: none;"> <!-- Oculta la imagen -->
+<img id="image" src="img/re.svg" style="display: none;">
 
 <script>
     function initMap() {
@@ -67,14 +67,12 @@
             center: ubicacion
         });
 
-        // Obtiene el elemento <img> por su id
         var image = document.getElementById('image');
 
-        // Convierte la imagen en un icono personalizado
         var iconoPersonalizado = {
-            url: image.src, // Utiliza la URL de la imagen cargada
-            size: new google.maps.Size(30, 30), // Tamaño del icono
-            scaledSize: new google.maps.Size(30, 30) // Tamaño escalado
+            url: image.src, 
+            size: new google.maps.Size(30, 30), 
+            scaledSize: new google.maps.Size(30, 30) 
         };
 
         var marker = new google.maps.Marker({
