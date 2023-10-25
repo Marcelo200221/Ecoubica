@@ -1,5 +1,5 @@
 <div style="display: flex; align-items: center;">
-        <img src="logoEcoubica.png" width="400" alt="" style="margin-right: 20px;">
+        <img src="logoEcoubica.png" width="400" alt="" style="margin-right">
     </a>
         <img src="logoGreencode.png" width="300" alt="" style="flex: 1;>
     </a>
