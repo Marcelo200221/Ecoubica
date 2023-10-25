@@ -1,7 +1,7 @@
 <div style="display: flex; align-items: center;">
-        <img src="logoEcoubica.png" width="400" alt="">
+        <img src="logoEcoubica.png" width="400" alt="" style="margin-right: 20px;">
     </a>
-        <img src="logoGreencode.png" width="320" alt="">
+        <img src="logoGreencode.png" width="300" alt="" style="flex: 1;>
     </a>
 </div>
 
