@@ -17,8 +17,8 @@ Ecoubica busca promover la conciencia ambiental y prácticas sostenibles al prop
 
 Nuestro equipo está conformado por:
 
-Marcelo Darras: Líder de proyecto, responsable de la dirección y planificación. 
-Raúl Valenzuela: Programador principal, especialista en lenguajes de programación y desarrollo de software.
-Francisca Herrera: Experta en documentación técnica y comunicación efectiva.
+<p>Marcelo Darras: Líder de proyecto, responsable de la dirección y planificación.</p>
+<p>Raúl Valenzuela: Programador principal, especialista en lenguajes de programación y desarrollo de software.</p>
+<p>Francisca Herrera: Experta en documentación técnica y comunicación efectiva.</p>
 
 
