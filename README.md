@@ -1,4 +1,9 @@
-<p align="center"><a href="" target="_blank"><img src="logoEcoubica.png" width="400" alt=""></a></p>
+<div style="display: flex; align-items: center;">
+        <img src="logoEcoubica.png" width="400" alt="">
+    </a>
+        <img src="logoGreencode.png" width="400" alt="">
+    </a>
+</div>
 
 <p align="center">
 <a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
