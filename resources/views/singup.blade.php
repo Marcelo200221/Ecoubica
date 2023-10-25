@@ -40,10 +40,10 @@
           <a class="nav-link color-enlace-personalizado" aria-current="page" href="/">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link color-enlace-personalizado" href="/login">Registro</a>
+          <a class="nav-link color-enlace-personalizado" href="/login">Ingresar</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active color-enlace-personalizado" href="/singin">Ingresar</a>
+          <a class="nav-link active color-enlace-personalizado" href="{{route('signup')}}">Registrarse</a>
         </li>
         <li class="nav-item">
           <a class="nav-link color-enlace-personalizado" href="#">Contacto</a>
@@ -76,12 +76,16 @@
                   </div>
               @endif
 
-              <form action="" method="POST">
+              <form action="{{route('validar-registro')}}" method="POST">
                   @csrf
                   <img src="{{ asset('img/eco.png') }}" width="150" alt="">
                   <div class="mb-3">
                       <label for="usuario" class="form-label">Usuario</label>
-                      <input type="text" class="form-control" id="usuario" name="usuario" value="ecoubica@gmail.com">
+                      <input type="text" class="form-control" id="usuario" name="name" value="Ecoubica">
+                  </div>
+                  <div class="mb-3">
+                      <label for="email" class="form-label">Email</label>
+                      <input type="text" class="form-control" id="email" name="email" value="ecoubica@gmail.com">
                   </div>
                   <div class="mb-3">
                       <label for="correo" class="form-label">Contraseña</label>

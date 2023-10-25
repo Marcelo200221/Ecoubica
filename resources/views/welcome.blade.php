@@ -41,14 +41,20 @@
           <a class="nav-link active color-enlace-personalizado" aria-current="page" href="/">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link color-enlace-personalizado" href="/login">Registro</a>
+          <a class="nav-link color-enlace-personalizado" href="/login">Ingresar</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link color-enlace-personalizado" href="singin">Ingresar</a>
+          <a class="nav-link color-enlace-personalizado" href="singup">registrarse</a>
         </li>
         <li class="nav-item">
           <a class="nav-link color-enlace-personalizado" href="#">Contacto</a>
         </li>
+        @if(Auth::check())
+          <li class="nav-item">
+            <a class="nav-link color-enlace-personalizado" href="{{route('logout')}}">Cerrar Sesion</a>
+          </li>
+        @endif
+        
       </ul>
     </div>
   </div>

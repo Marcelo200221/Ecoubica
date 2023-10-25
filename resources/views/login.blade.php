@@ -40,10 +40,10 @@
           <a class="nav-link color-enlace-personalizado" aria-current="page" href="/">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active color-enlace-personalizado" href="login">Registro</a>
+          <a class="nav-link active color-enlace-personalizado" href="login">Ingresar</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link color-enlace-personalizado" href="/singin">Ingresar</a>
+          <a class="nav-link color-enlace-personalizado" href="{{route('signup')}}">Registrarse</a>
         </li>
         <li class="nav-item">
           <a class="nav-link color-enlace-personalizado" href="#">Contacto</a>
@@ -62,16 +62,19 @@
           <div class="card text-left mt-3">
             <div class="card-body">
 
-              <h2>Registrarse</h2>
+              <h2>Iniciar Sesion</h2>
               <pre>{{ Auth::user() }}</pre>
-
-              <form action="" method="POST">
+              @if(Auth::check())
+                <label for="">¡¡Ya estás logueado!!</label>
+                <a href="{{route('welcome')}}" type="button" class="btn btn-primary">Volver</a>
+              @else
+              <form action="{{route('inicia-sesion')}}" method="POST">
                 @csrf
                
                   <img src="{{ asset('img/eco.png') }}" width="150" alt="">
                   <div class="mb-3">
                       <label for="usuario" class="form-label">Usuario</label>
-                      <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Email">
+                      <input type="text" class="form-control" id="usuario" name="email" placeholder="Email">
                   </div>
                   <div class="mb-3">
                       <label for="correo" class="form-label">Contraseña</label>
@@ -81,6 +84,7 @@
                     <button class="btn btn-primary" type="submit">Iniciar</button>
                   </div>
               </form>
+              @endif
 
             </div>
           </div>
