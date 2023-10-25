@@ -1,5 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="![C amarillo](https://github.com/Marcelo200221/Ecoubica/assets/107163249/52080903-518c-4993-8556-1a9922a18ac4)
-" width="400" alt=""></a></p>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="ECOUBICA3-LOGO.png" width="400" alt=""></a></p>
 
 <p align="center">
 <a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
