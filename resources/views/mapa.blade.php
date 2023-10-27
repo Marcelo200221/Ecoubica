@@ -1,60 +1,14 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ecoubica</title>
-    <link rel="shortcut icon" href="{{ asset('img/Logo2(1).png') }}" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+@extends('layouts.general')
+@section('content')
 
-    <style>
-    body {
-        background-color: #A0FFBD;
-    }
-
-    .svg-icon {
-        width: 40px;
-        height: 40px;
-    }
-
-    .color-enlace-personalizado {
-        color: #FFFFFF;
-    }
-
+<style>
     #map {
-        height: 600px;
-        width: 70%;
-        margin: 20px auto 0;
+    height: 600px;
+    width: 70%;
+    margin: 20px auto 0;
     }
-    </style>
-</head>
-<body>
+</style>
 
-<header>
-    <div class="navbar navbar-dark bg-success shadow-sm">
-        <div class="container">
-            <a href="#" class="navbar-brand d-flex align-items-center">
-                <img src="{{ asset('img/re.svg') }}" alt="" class="svg-icon">
-                <strong>Ecoubica</strong>
-            </a>
-            <ul class="nav nav-underline">
-                <li class="nav-item">
-                    <a class="nav-link color-enlace-personalizado" aria-current="page" href="/">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link color-enlace-personalizado" href="/login">Registro</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link color-enlace-personalizado" href="singin">Ingresar</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link color-enlace-personalizado" href="#">Contacto</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</header>
 
 <h1 class="text-center mt-4">Mapa de Ubicaciones Ecoubica</h1>
     <div id="map"></div>
@@ -289,6 +243,5 @@
 
 
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmzxktL-ApQe9WO-ZSSk-CtypQuN_QwEc&callback=initMap"></script>
+@endsection
 
-</body>
-</html>

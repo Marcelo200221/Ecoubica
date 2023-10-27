@@ -25,6 +25,10 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');;
 
+Route::get('/general', function(){
+    return view('general');
+})->name('general');
+
 Route::get('/login', function () {
     return view('login');
 })->name('login');
