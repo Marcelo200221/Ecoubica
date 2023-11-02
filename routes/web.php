@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ReportController;
 
 /*Route::view('/welcome', 'welcome')->middleware ('auth');
 
@@ -37,8 +38,15 @@ Route::get('/singup', function () {
     return view('singup');
 })->name('signup');
 
+Route::get('/reporte', function() {
+    return view('reporte');
+})->name('reporte');
+
+Route::get('/ver-reportes', [ReportController::class, 'mostrarReportes'])->name('verReportes');
+
 Route::post('/validar-registro', [LoginController::class, 'register'])->name('validar-registro');
 Route::post('/inicia-sesion', [LoginController::class, 'login'])->name('inicia-sesion');
+Route::post('/envioRepo', [ReportController::class, 'reporte'])->name('envioRepo');
 
 Route::get('/mapa', function () {
     return view('mapa');

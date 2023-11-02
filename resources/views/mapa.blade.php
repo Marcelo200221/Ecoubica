@@ -19,6 +19,18 @@
     var map;
     var image;
     var marker1, marker2, marker3, marker4, marker5, marker6, marker7, marker8, marker9, marker10;
+    var mensaje1 = `<div>
+                        <h3>Punto Verde Deshabilitado</h3>
+                        <a href="{{route('reporte')}}" class="btn btn-danger">Reportar</a>
+                      </div>`;
+    var mensaje2 = `<div>
+                        <h3>Punto Verde Habilitado</h3>
+                        <a href="{{route('reporte')}}" class="btn btn-danger">Reportar</a>
+                      </div>`;
+    var mensaje3 = `<div>
+                        <h3>Punto Verde en mantención</h3>
+                        <a href="{{route('reporte')}}" class="btn btn-danger">Reportar</a>
+                      </div>`
 
     function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
@@ -50,43 +62,43 @@
         var ubicacion10 = {lat: -33.5686, lng: -70.6761};
 
         var infoWindow1 = new google.maps.InfoWindow({
-            content: 'Punto Verde Deshabilitado'
+            content: mensaje1
         });
 
         var infoWindow2 = new google.maps.InfoWindow({
-            content: 'Punto Verde en Mantención'
+            content: mensaje3
         });
 
         var infoWindow3 = new google.maps.InfoWindow({
-            content: 'Punto Verde Habilitado'
+            content: mensaje2
         });
 
         var infoWindow4 = new google.maps.InfoWindow({
-            content: 'Punto Verde en Mantención'
+            content: mensaje3
         });
 
         var infoWindow5 = new google.maps.InfoWindow({
-            content: 'Punto Verde Deshabilitado'
+            content: mensaje1
         });
 
         var infoWindow6 = new google.maps.InfoWindow({
-            content: 'Punto Verde Habilitado'
+            content: mensaje2
         });
 
         var infoWindow7 = new google.maps.InfoWindow({
-            content: 'Punto Verde Habilitado'
+            content: mensaje2
         });
 
         var infoWindow8 = new google.maps.InfoWindow({
-            content: 'Punto Verde Habilitado'
+            content: mensaje2
         });
 
         var infoWindow9 = new google.maps.InfoWindow({
-            content: 'Punto Verde en Mantención'
+            content: mensaje3
         });
 
         var infoWindow10 = new google.maps.InfoWindow({
-            content: 'Punto Verde Deshabilitado'
+            content: mensaje1
         });
 
         marker1 = new google.maps.Marker({

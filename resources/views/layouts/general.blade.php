@@ -44,12 +44,17 @@
           <li class="nav-item">
             <a class="nav-link color-enlace-personalizado" href="{{route('logout')}}">Cerrar Sesion</a>
           </li>
+          @if(Auth::user()->role === 'admin')
+          <li class="nav-item">
+            <a class="nav-link color-enlace-personalizado" href="{{route('verReportes')}}">Ver reportes</a>
+          </li>
+          @endif
         @else
           <li class="nav-item">
             <a class="nav-link color-enlace-personalizado" href="/login">Ingresar</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link color-enlace-personalizado" href="singup">registrarse</a>
+            <a class="nav-link color-enlace-personalizado" href="singup">Registrarse</a>
           </li>
         @endif
         <li class="nav-item">
