@@ -1,7 +1,7 @@
 @extends('layouts.general')
 @section('content')
 
-<img src="{{ asset('img/eslogan.png') }}" alt="" width="1500" height="500">
+<img src="{{ asset('img/eslogan.png') }}" alt="" width="2000" height="500">
 <section class="py-5 text-center container">
     <div class="row">
       <div class="col">

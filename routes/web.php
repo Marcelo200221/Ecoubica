@@ -43,10 +43,12 @@ Route::get('/reporte', function() {
 })->name('reporte');
 
 Route::get('/ver-reportes', [ReportController::class, 'mostrarReportes'])->name('verReportes');
+Route::put('/validar-reporte/{id}', [ReportController::class, 'validarReporte'])->name('validar-reporte');
 
 Route::post('/validar-registro', [LoginController::class, 'register'])->name('validar-registro');
 Route::post('/inicia-sesion', [LoginController::class, 'login'])->name('inicia-sesion');
 Route::post('/envioRepo', [ReportController::class, 'reporte'])->name('envioRepo');
+Route::delete('/eliminar-reporte/{id}', [ReportController::class, 'eliminarReporte'])->name('eliminar-reporte');
 
 Route::get('/mapa', function () {
     return view('mapa');

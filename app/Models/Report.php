@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Report extends Model
 {
     use HasFactory;
+
+    protected $table = 'reports'; // Sustituye 'nombre_de_la_tabla_de_informes' con el nombre real de tu tabla.
+
+    protected $fillable = ['title', 'message'];
 }
+
+

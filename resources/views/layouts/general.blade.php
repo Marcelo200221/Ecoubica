@@ -17,9 +17,9 @@
       }    
 
     .svg-icon {
-    width: 40px;
-    height: 40px;
-      }
+      width: 40px;
+      height: 40px;
+    }
 
     .color-enlace-personalizado {
     color: #FFFFFF; 
