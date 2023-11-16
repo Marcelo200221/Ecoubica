@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ReportController;
+use App\Http\Controllers\LibrosController;
 
 /*Route::view('/welcome', 'welcome')->middleware ('auth');
 
@@ -42,8 +43,14 @@ Route::get('/reporte', function() {
     return view('reporte');
 })->name('reporte');
 
+Route::get('/añadirLibro', function(){
+    return view('añadirLibro');
+})->name('añadirLibro');
+
 Route::get('/ver-reportes', [ReportController::class, 'mostrarReportes'])->name('verReportes');
 Route::put('/validar-reporte/{id}', [ReportController::class, 'validarReporte'])->name('validar-reporte');
+
+Route::post('/nuevoLibro', [LibrosController::class, 'ingresarLibro'])->name('nuevoLibro');
 
 Route::post('/validar-registro', [LoginController::class, 'register'])->name('validar-registro');
 Route::post('/inicia-sesion', [LoginController::class, 'login'])->name('inicia-sesion');

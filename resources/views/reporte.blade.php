@@ -10,13 +10,17 @@
                     @csrf
                     <div>
                         <label for="">Titulo reporte:</label>
-                        <input type="text" name='title'>
+                        <select name="title" id="title">
+                            <option value="default" selected disabled>Seleccione un tipo de reporte</option>
+                            <option value="Reporte de mal estado">Reporte de mal estado</option>
+                            <option value="Sugerir nuevo punto verde">Sugerir punto verde</option>
+                        </select>
                     </div>
                     <div>
                         <label for="">Mensaje:</label>
                         <textarea name="message" id="" cols="30" rows="10"></textarea>
                     </div>
-                    <button class='btn btn-primary' type='submit'>Enviar</button>
+                    <button onClick="enviarReporte()" class='btn btn-primary' type='submit'>Enviar</button>
                 </form>
         </div>
     </div>
