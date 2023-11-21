@@ -6,6 +6,7 @@
     <title>Ecoubica</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="shortcut icon" href="{{ asset('img/Logo2(1).png') }}" type="image/x-icon">
+    <link rel="icon" href="/img/eco.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
@@ -14,23 +15,29 @@
      body {
         background-color: #A0FFBD;
 
-      }    
-
+    }
+    .nav-link:hover{
+        color: rgb(5, 51, 5);
+    }
     .svg-icon {
       width: 40px;
       height: 40px;
     }
 
     .color-enlace-personalizado {
-    color: #FFFFFF; 
+    color: #FFFFFF;
       }
+    .container{
+        color: white;
+        text-align: center
+    }
 
 
     </style>
 
   </head>
   <body>
-    
+
   <header>
   <div class="navbar navbar-dark bg-success shadow-sm">
     <div class="container">
@@ -68,7 +75,7 @@
         <li class="nav-item">
           <a class="nav-link color-enlace-personalizado" href="#">Contacto</a>
         </li>
-        
+
       </ul>
     </div>
   </div>
@@ -88,6 +95,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous"></script>
-    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
 </body>
 </html>

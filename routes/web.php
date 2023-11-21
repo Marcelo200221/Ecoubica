@@ -16,7 +16,7 @@ Route::post('login', function(){
     $credentials = request()->only ('email', 'password');
 
     if (Auth::attempt($credentials)){
-       return"Registro exitoso"; 
+       return"Registro exitoso";
     }
     return "Registro fallido";
 
@@ -62,6 +62,6 @@ Route::delete('/eliminar-libro/{name}', [LibrosController::class, 'eliminarLibro
 
 Route::get('/mapa', function () {
     return view('mapa');
-})->middleware('auth')->name('mapa');
+})/*->middleware('auth')*/->name('mapa');
 
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');

@@ -7,6 +7,9 @@
         width: 70%;
         margin: 20px auto 0;
     }
+    #report{
+        color: white
+    }
     .leaflet-control-geocoder.leaflet-bar {
         background-color: #fff;
         border: 1px solid #ccc;
@@ -50,19 +53,38 @@
     }).addTo(map);
 
     var mensaje1 = `<div>
-                        <h3>Punto Verde Deshabilitado</h3>
-                        <a href="{{route('reporte')}}" class="btn btn-danger">Reportar</a>
-                      </div>`;
-    var mensaje2 = `<div>
-                        <h3>Punto Verde Habilitado</h3>
-                        <a href="{{route('reporte')}}" class="btn btn-danger">Reportar</a>
-                      </div>`;
-    var mensaje3 = `<div>
-                        <h3>Punto Verde en mantención</h3>
-                        <a href="{{route('reporte')}}" class="btn btn-danger">Reportar</a>
-                      </div>`
+                        <h3>Punto Verde <span id="estSeleccionado"></span> </h3>
+                        <a href="{{route('reporte')}}" class="btn btn-danger" id="report">Reportar</a>
+                        <select id="estados" class="form-select form-select-sm" aria-label=".form-select-sm" onchange="seleccionEstado();">
+                            <option selected disabled>Estado de punto</option>
+                            <option value="Habilitado">Habilitado</option>
+                            <option value="en Mantención">en Mantención</option>
+                            <option value="Deshabilitado">Deshabilitado</option>
+                        </select>
+                    </div>`;
 
-    
+    var mensaje2 = `<div>
+                        <h3>Punto Verde <span id="estSeleccionado"></span> </h3>
+                        <a href="{{route('reporte')}}" class="btn btn-danger" id="report">Reportar</a>
+                        <select id="estados" class="form-select form-select-sm" aria-label=".form-select-sm" onchange="seleccionEstado();">
+                            <option selected disabled>Estado de punto</option>
+                            <option value="Habilitado">Habilitado</option>
+                            <option value="en Mantención">en Mantención</option>
+                            <option value="Deshabilitado">Deshabilitado</option>
+                        </select>
+                      </div>`;
+
+    var mensaje3 = `<div>
+                        <h3>Punto Verde <span id="estSeleccionado"></span> </h3>
+                        <a href="{{route('reporte')}}" class="btn btn-danger" id="report">Reportar</a>
+                        <select id="estados" class="form-select form-select-sm" aria-label=".form-select-sm" onchange="seleccionEstado();">
+                            <option selected disabled>Estado de punto</option>
+                            <option value="Habilitado">Habilitado</option>
+                            <option value="en Mantención">en Mantención</option>
+                            <option value="Deshabilitado">Deshabilitado</option>
+                        </select>
+                      </div>`;
+
     var ubicaciones = [
         { lat: -33.45694, lng: -70.64827, title: 'Ubicación 1', icon: 'img/C.rojo.png', content: mensaje1 },
         { lat: -33.5227, lng: -70.6007, title: 'Ubicación 2', icon: 'img/C.amarillo.png', content: mensaje3 },
@@ -73,9 +95,10 @@
         { lat: -33.4575, lng: -70.6783, title: 'Ubicación 7', icon: 'img/C.verde.png', content: mensaje2 },
         { lat: -33.4929, lng: -70.5990, title: 'Ubicación 8', icon: 'img/C.verde.png', content: mensaje2 },
         { lat: -33.4166, lng: -70.5927, title: 'Ubicación 9', icon: 'img/C.amarillo.png', content: mensaje3 },
-        { lat: -33.5686, lng: -70.6761, title: 'Ubicación 10', icon: 'img/C.rojo.png', content: mensaje1 }
+        { lat: -33.5686, lng: -70.6761, title: 'Ubicación 10', icon: 'img/C.rojo.png', content: mensaje1 },
+        { lat: -33.50010, lng: -70.61608, title: 'Ubicación 11', icon: 'img/C.verde.png', content: mensaje2 },
     ];
-    
+
     ubicaciones.forEach(function (ubicacion) {
         var marker = L.marker([ubicacion.lat, ubicacion.lng], {
             icon: L.icon({
@@ -88,10 +111,21 @@
 
         marker.bindPopup(ubicacion.content).openPopup();
     });
+
+
 </script>
 
 <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
+<script>
+    function seleccionEstado(){
+        let estados = document.getElementById('estados');
+        let status = estados.value;
+
+        document.getElementById('estSeleccionado').innerText =  status ;
+
+    }
+</script>
 
 @endsection
