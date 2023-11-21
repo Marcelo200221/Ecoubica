@@ -6,12 +6,11 @@
             <div class="card-body">
               
             <h5 class="card-title">Nuevo libro</h5>
-            <form action="{{route('nuevoLibro')}}" method="post">
+            <form action="{{route('nuevoLibro')}}" method="post" enctype="multipart/form-data">
               @csrf
               <div class="libro">
-                <label for="">Titulo</label>
-                <input class="form-control" type="text" name="name">
                 <label for="">Ingrese el libro en formato PDF</label>
+                <input class="form-control" type="text" name="name">
                 <input class="form-control" type="file" name="libro">
               </div>
               <button class="btn btn-danger" type="submit">Ingresar</button>

@@ -19,6 +19,7 @@
 
             $user->name = $request->name;
             $user->email = $request->email;
+            $user->rut = $request->rut;
             $user->password = Hash::make($request->password);
             $user->role = 'user';
             $user->save();

@@ -50,7 +50,13 @@
           <li class="nav-item">
             <a class="nav-link color-enlace-personalizado" href="{{route('verReportes')}}">Ver reportes</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link color-enlace-personalizado" href="{{route('añadirLibro')}}">Nuevo libro</a>
+          </li>
           @endif
+          <li class="nav-item">
+            <a class="nav-link color-enlace-personalizado" href="{{route('verLibros')}}">Banco de libros</a>
+          </li>
         @else
           <li class="nav-item">
             <a class="nav-link color-enlace-personalizado" href="/login">Ingresar</a>
@@ -70,7 +76,7 @@
 
 
 
-@yield('content')->@section('content')
+@yield('content') @section('content')
 
 <footer class="text-body-primary py-3" style="background-color: #198754;">
   <div class="container">
