@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Libro;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
 
 class LibrosController extends Controller
 {
@@ -42,16 +44,33 @@ class LibrosController extends Controller
     }
 
     public function eliminarLibro($name){
-        $lib = Libro::where('name', $name)->first();
+        $lib = Libro::find($name);
 
-        $rutaDelArchivo = public_path('Archivos/' . $libro->libro);
+        $rutaDelArchivo = storage_path("app/public/Archivos/{$lib->libro}");
 
         if (file_exists($rutaDelArchivo)) {
             unlink($rutaDelArchivo);
         }
 
-        $libro->delete();
+        $lib->delete();
 
         return "Libro eliminado correctamente";
+    }
+
+    public function leerLibro($name){
+        $cleanedName = Str::slug($name);
+        $lib = Libro::where('name', $cleanedName)->first();
+        if($lib){
+            $rutaArchivo = Storage::disk('public')->path("Archivos/{$lib->libro}");
+            print_r($rutaArchivo); // Imprime la ruta para verificar
+        
+            if(file_exists($rutaArchivo)){
+                return response()->file($rutaArchivo);
+            } else {
+                abort(404, 'El libro existe, pero no se encuentra el archivo');
+            }
+        } else {
+            abort(404, 'El libro no existe');
+        }
     }
 }

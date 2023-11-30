@@ -57,13 +57,13 @@
           <li class="nav-item">
             <a class="nav-link color-enlace-personalizado" href="{{route('verReportes')}}">Ver reportes</a>
           </li>
-          <li class="nav-item">
+          <!--<li class="nav-item">
             <a class="nav-link color-enlace-personalizado" href="{{route('añadirLibro')}}">Nuevo libro</a>
-          </li>
+          </li>-->
           @endif
-          <li class="nav-item">
+          <!--<li class="nav-item">
             <a class="nav-link color-enlace-personalizado" href="{{route('verLibros')}}">Banco de libros</a>
-          </li>
+          </li>-->
         @else
           <li class="nav-item">
             <a class="nav-link color-enlace-personalizado" href="/login">Ingresar</a>
