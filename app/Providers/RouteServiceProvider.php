@@ -38,3 +38,5 @@ class RouteServiceProvider extends ServiceProvider
         });
     }
 }
+
+Route::get('/mapa', 'MapController@mostrarMapa');

@@ -35,6 +35,10 @@
                       <input type="text" class="form-control" id="email" name="email" value="ecoubica@gmail.com">
                   </div>
                   <div class="mb-3">
+                      <label for="rut" class="form-label">Rut</label>
+                      <input type="text" class="form-control" id="email" name="rut" value="12345678-9">
+                  </div>
+                  <div class="mb-3">
                       <label for="correo" class="form-label">Contraseña</label>
                       <input type="password" class="form-control" id="password" name="password" value="admin">
                   </div>

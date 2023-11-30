@@ -11,7 +11,6 @@
             <div class="card-body">
 
               <h2>Iniciar Sesion</h2>
-              <pre>{{ Auth::user() }}</pre>
               @if(Auth::check())
                 <label for="">¡¡Ya estás logueado!!</label>
                 <a href="{{route('welcome')}}" type="button" class="btn btn-primary">Volver</a>
